@@ -21,12 +21,14 @@ public class LogDemoController {
     @RequestMapping("log-demo")
     @ResponseBody
     public String logDemo(HttpServletRequest request){
+//        System.out.println("myLoggerObjectProvider = " + myLoggerObjectProvider.getClass());
 //        MyLogger myLogger = myLoggerObjectProvider.getObject();
+        System.out.println("myLogger = " + myLogger.getClass());
         myLogger.setRequestURL(request.getRequestURL().toString());
 
         myLogger.log("controller test");
 
-        logDemoService.logic("testId");
+        logDemoService.logic("testServiceId");
         return "OK";
     }
 }
