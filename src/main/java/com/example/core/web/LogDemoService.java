@@ -14,6 +14,7 @@ public class LogDemoService {
 
     public void logic(String id) {
 //        MyLogger myLogger = myLoggerObjectProvider.getObject();
+        System.out.println("My Logger of Service = " + myLogger.getClass());
         myLogger.log("service id = " + id);
     }
 }

@@ -23,7 +23,7 @@ public class LogDemoController {
     public String logDemo(HttpServletRequest request){
 //        System.out.println("myLoggerObjectProvider = " + myLoggerObjectProvider.getClass());
 //        MyLogger myLogger = myLoggerObjectProvider.getObject();
-        System.out.println("myLogger = " + myLogger.getClass());
+        System.out.println("myLogger of Controller = " + myLogger.getClass());
         myLogger.setRequestURL(request.getRequestURL().toString());
 
         myLogger.log("controller test");

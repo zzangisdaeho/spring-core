@@ -16,6 +16,7 @@ public class SingletonTest {
     void singletonBeanFind(){
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SingletonBean.class);
 
+        System.out.println("before get");
         SingletonBean singletonBean1 = ac.getBean(SingletonBean.class);
         SingletonBean singletonBean2 = ac.getBean(SingletonBean.class);
 
