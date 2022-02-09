@@ -36,6 +36,8 @@ public class PrototypeTest {
             System.out.println("PrototypeBean.init");
         }
 
+        // 프로토 타입 빈은 스프링 컨테이너가 생성까지만 관리한다.
+        // 고로 초기화 콜백은 있어도 소멸 전 콜백은 일어나지 않는다.
         @PreDestroy
         public void destroy(){
             System.out.println("PrototypeBean.destroy");
